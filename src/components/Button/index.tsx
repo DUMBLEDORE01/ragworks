@@ -2,6 +2,7 @@ import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
 
+// Updated button styles with WCAG AA compliant colors
 const buttonStyles = cva(
   [
     "w-full",
@@ -30,7 +31,8 @@ const buttonStyles = cva(
       {
         variant: "solid",
         colorscheme: "primary",
-        className: "bg-primary-500 hover:bg-primary-600",
+        // Darker blue to improve contrast
+        className: "bg-primary-600 hover:bg-primary-700",
       },
       {
         variant: "outline",
@@ -65,3 +67,5 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
+
+Button.displayName = "Button";
